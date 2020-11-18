@@ -11,6 +11,12 @@ function pari(value) {
 		return false;
 }
 
+function randomNumber(min, max)  {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 var domanda;
 var button = confirm("Pari?");
 if (button === true) {
@@ -21,7 +27,7 @@ if (button === true) {
 
 var numeroUtente = parseInt(prompt('Inserisci un numero compreso tra 1 e 5'));
 console.log(numeroUtente);
-var numeroComputer = Math.floor(Math.random() * 5) + 1  ;
+var numeroComputer = randomNumber(1,5);
 console.log(numeroComputer);
 var sommaNumeri = numeroUtente + numeroComputer;
 console.log(sommaNumeri);
